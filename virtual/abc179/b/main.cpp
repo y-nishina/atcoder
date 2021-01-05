@@ -16,5 +16,24 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  vector<vector<ll>> d(n, vector<ll>(2));
+
+  rep(i, n) cin >> d[i][0] >> d[i][1];
+
+  string ans = "No";
+  int count = 0;
+  rep(i, n) {
+    if (d[i][0] == d[i][1]) {
+      count++;
+    } else {
+      count = 0;
+    }
+
+    if (count >= 3) {
+      ans = "Yes";
+      break;
+    }
+  }
+
+  cout << ans << endl;
 }
