@@ -16,5 +16,19 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  ll ans = 0;
+  for (ll a = 1; a <= floor(sqrt(n)); a++) {
+    for (ll b = a; b < n; b++) {
+      if (a * b < n) {
+        ans++;
+        if (a != b) {
+          ans++;
+        }
+      } else {
+        break;
+      }
+    }
+  }
+
+  cout << ans << endl;
 }
