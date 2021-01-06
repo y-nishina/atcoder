@@ -31,7 +31,12 @@
       "id": "abc179_c",
       "label": "C",
       "title": "A x B + C",
-      "url": "https://atcoder.jp/contests/abc179/tasks/abc179_c"
+      "url": "https://atcoder.jp/contests/abc179/tasks/abc179_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc179_d",
