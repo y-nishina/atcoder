@@ -20,7 +20,12 @@
       "id": "abc178_b",
       "label": "B",
       "title": "Product Max",
-      "url": "https://atcoder.jp/contests/abc178/tasks/abc178_b"
+      "url": "https://atcoder.jp/contests/abc178/tasks/abc178_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc178_c",
