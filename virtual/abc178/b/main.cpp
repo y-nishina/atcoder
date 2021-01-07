@@ -16,20 +16,14 @@ int main() {
   ll a, b, c, d;
   cin >> a >> b >> c >> d;
 
-  if (a >= 0 && c >= 0) {
-    cout << b * d << endl;
-    return 0;
+  ll m = max(max(a * c, a * d), max(b * c, b * d));
+
+  if (m < 0) {
+    if (a * b < 0 || c * d < 0) {
+      cout << 0 << endl;
+      return 0;
+    }
   }
 
-  if (a < 0 && c < 0) {
-    cout << max(a * c, b * d) << endl;
-    return 0;
-  }
-
-  if (a * b < 0 || c * d < 0) {
-    cout << 0 << endl;
-    return 0;
-  }
-
-  cout << max(a * d, b * c) << endl;
+  cout << m << endl;
 }
