@@ -13,8 +13,23 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll a, b, c, d;
+  cin >> a >> b >> c >> d;
 
-  cout << n << endl;
+  if (a >= 0 && c >= 0) {
+    cout << b * d << endl;
+    return 0;
+  }
+
+  if (a < 0 && c < 0) {
+    cout << max(a * c, b * d) << endl;
+    return 0;
+  }
+
+  if (a * b < 0 || c * d < 0) {
+    cout << 0 << endl;
+    return 0;
+  }
+
+  cout << max(a * d, b * c) << endl;
 }
