@@ -20,7 +20,12 @@
       "id": "abc177_b",
       "label": "B",
       "title": "Substring",
-      "url": "https://atcoder.jp/contests/abc177/tasks/abc177_b"
+      "url": "https://atcoder.jp/contests/abc177/tasks/abc177_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc177_c",
