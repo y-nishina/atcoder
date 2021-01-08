@@ -13,8 +13,8 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll d, t, s;
+  cin >> d >> t >> s;
 
-  cout << n << endl;
+  cout << ((t * s >= d) ? "Yes" : "No") << endl;
 }
