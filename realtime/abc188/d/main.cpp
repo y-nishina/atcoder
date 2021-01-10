@@ -13,26 +13,25 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n, d;
-  cin >> n >> d;
+  ll n, C;
+  cin >> n >> C;
   vector<ll> a(n), b(n), c(n);
   rep(i, n) cin >> a[i] >> b[i] >> c[i];
   rep(i, n) a[i]--;
 
-  ll max = *max_element(b.begin(), b.end());
-  vector<ll> x(max);
-
+  map<ll, ll> map;
   rep(i, n) {
-    x[a[i] - 1] += c[i];
-    x[b[i]] -= c[i];
+    map[a[i]] += c[i];
+    map[b[i]] -= c[i];
   }
 
-  ll ans = 0;
   ll sum = 0;
-  rep(i, max) {
-    sum += x[i];
-
-    ans += min(sum, d);
+  ll ans = 0;
+  ll last = 0;
+  for (auto m : map) {
+    ans += min(sum, C) * (m.first - last);
+    sum += m.second;
+    last = m.first;
   }
 
   cout << ans << endl;
