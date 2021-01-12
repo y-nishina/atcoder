@@ -14,8 +14,13 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
+  string n;
   cin >> n;
 
-  cout << n << endl;
+  ll num = 0;
+  for (char s : n) {
+    num += s - '0';
+  }
+
+  cout << ((num % 9 == 0) ? "Yes" : "No") << endl;
 }
