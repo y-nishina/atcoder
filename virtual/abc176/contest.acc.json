@@ -20,7 +20,12 @@
       "id": "abc176_b",
       "label": "B",
       "title": "Multiple of 9",
-      "url": "https://atcoder.jp/contests/abc176/tasks/abc176_b"
+      "url": "https://atcoder.jp/contests/abc176/tasks/abc176_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc176_c",
