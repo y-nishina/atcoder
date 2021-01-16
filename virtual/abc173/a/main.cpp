@@ -17,5 +17,6 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  ll amari = n % 1000;
+  cout << (amari == 0 ? 0 : 1000 - amari) << endl;
 }
