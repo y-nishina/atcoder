@@ -17,5 +17,24 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  vector<ll> l(n);
+  rep(i, n) cin >> l[i];
+
+  vsort(l);
+
+  ll ans = 0;
+  for (ll i = 0; i < n - 2; i++) {
+    for (ll j = i + 1; j < n - 1; j++) {
+      for (ll k = j + 1; k < n; k++) {
+        if (l[i] == l[j] || l[j] == l[k] || l[k] == l[i]) {
+          continue;
+        }
+        if (l[i] + l[j] > l[k]) {
+          ans++;
+        }
+      }
+    }
+  }
+
+  cout << ans << endl;
 }
