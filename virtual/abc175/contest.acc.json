@@ -20,7 +20,12 @@
       "id": "abc175_b",
       "label": "B",
       "title": "Making Triangle",
-      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_b"
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc175_c",
