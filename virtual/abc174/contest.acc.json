@@ -20,7 +20,12 @@
       "id": "abc174_b",
       "label": "B",
       "title": "Distance ",
-      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_b"
+      "url": "https://atcoder.jp/contests/abc174/tasks/abc174_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc174_c",
