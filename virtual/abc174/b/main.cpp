@@ -14,8 +14,17 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, d;
+  cin >> n >> d;
 
-  cout << n << endl;
+  vector<ll> x(n), y(n);
+  rep(i, n) cin >> x[i] >> y[i];
+
+  ll ans = 0;
+  rep(i, n) {
+    if (sqrt(pow(x[i], 2) + pow(y[i], 2)) <= d) {
+      ans++;
+    }
+  }
+  cout << ans << endl;
 }
