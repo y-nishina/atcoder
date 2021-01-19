@@ -14,8 +14,8 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll a;
+  cin >> a;
 
-  cout << n << endl;
+  cout << a + a * a + a * a * a << endl;
 }
