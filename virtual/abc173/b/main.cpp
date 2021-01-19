@@ -16,6 +16,21 @@ typedef long long ll;
 int main() {
   ll n;
   cin >> n;
+  vector<string> s(n);
 
-  cout << n << endl;
+  rep(i, n) cin >> s[i];
+
+  ll ac = 0, wa = 0, tle = 0, re = 0;
+
+  rep(i, n) {
+    if (s[i] == "AC") ac++;
+    if (s[i] == "WA") wa++;
+    if (s[i] == "TLE") tle++;
+    if (s[i] == "RE") re++;
+  }
+
+  cout << "AC x " << ac << endl;
+  cout << "WA x " << wa << endl;
+  cout << "TLE x " << tle << endl;
+  cout << "RE x " << re << endl;
 }
