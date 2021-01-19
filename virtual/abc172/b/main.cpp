@@ -14,8 +14,14 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  string s, t;
+  cin >> s;
+  cin >> t;
 
-  cout << n << endl;
+  ll ans = 0;
+  rep(i, s.size()) {
+    if (s[i] != t[i]) ans++;
+  }
+
+  cout << ans << endl;
 }
