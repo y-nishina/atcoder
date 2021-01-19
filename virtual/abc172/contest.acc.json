@@ -20,7 +20,12 @@
       "id": "abc172_b",
       "label": "B",
       "title": "Minor Change",
-      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_b"
+      "url": "https://atcoder.jp/contests/abc172/tasks/abc172_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc172_c",
