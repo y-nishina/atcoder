@@ -20,7 +20,12 @@
       "id": "abc173_b",
       "label": "B",
       "title": "Judge Status Summary",
-      "url": "https://atcoder.jp/contests/abc173/tasks/abc173_b"
+      "url": "https://atcoder.jp/contests/abc173/tasks/abc173_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc173_c",
