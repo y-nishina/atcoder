@@ -14,8 +14,16 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, k;
+  cin >> n >> k;
 
-  cout << n << endl;
+  vector<ll> p(n);
+  rep(i, n) cin >> p[i];
+
+  vsort(p);
+
+  ll ans = 0;
+  rep(i, k) { ans += p[i]; }
+
+  cout << ans << endl;
 }
