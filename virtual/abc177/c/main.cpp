@@ -17,5 +17,15 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
+
+  ll ans = 0;
+  rep(i, n - 1) {
+    for (ll j = i + 1; j < n; j++) {
+      ans += a[i] * a[j] % MOD;
+    }
+  }
+
+  cout << ans % MOD << endl;
 }
