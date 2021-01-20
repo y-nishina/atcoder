@@ -20,7 +20,12 @@
       "id": "abc171_b",
       "label": "B",
       "title": "Mix Juice",
-      "url": "https://atcoder.jp/contests/abc171/tasks/abc171_b"
+      "url": "https://atcoder.jp/contests/abc171/tasks/abc171_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc171_c",
