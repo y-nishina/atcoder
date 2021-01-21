@@ -20,12 +20,13 @@ int main() {
   vector<ll> a(n);
   rep(i, n) cin >> a[i];
 
+  // 後ろからの累積和を求めておく
+  vector<ll> d(n - 1);
+  d[n - 2] = a[n - 1];
+  repab(i, 1, n - 1) d[n - i - 2] = (d[n - i - 1] + a[n - i - 1]) % MOD;
+
   ll ans = 0;
-  rep(i, n - 1) {
-    for (ll j = i + 1; j < n; j++) {
-      ans += a[i] * a[j] % MOD;
-    }
-  }
+  rep(i, n - 1) ans += a[i] * d[i] % MOD;
 
   cout << ans % MOD << endl;
 }
