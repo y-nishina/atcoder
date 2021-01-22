@@ -17,5 +17,15 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
+
+  ll ans = 0;
+  ll m = 0;
+  rep(i, n - 1) {
+    m = max(m, a[i]);
+    if (m > a[i + 1]) ans += m - a[i + 1];
+  }
+
+  cout << ans << endl;
 }
