@@ -17,5 +17,20 @@ int main() {
   ll n;
   cin >> n;
 
-  cout << n << endl;
+  vector<string> s(n);
+  set<string> sSet;
+  rep(i, n) {
+    cin >> s[i];
+    sSet.insert(s[i]);
+  };
+
+  string ans = "satisfiable";
+  rep(i, n) {
+    if (sSet.count("!" + s[i]) != 0) {
+      ans = s[i];
+      break;
+    };
+  }
+
+  cout << ans << endl;
 }
