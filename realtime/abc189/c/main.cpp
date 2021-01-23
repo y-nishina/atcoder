@@ -17,7 +17,36 @@ int main() {
   ll n;
   cin >> n;
 
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
+
   ll ans = 0;
+  rep(i, n) {
+    ll m = a[i];
+
+    // 自分より前を見る
+    for (ll j = i - 1; j >= 0; j--) {
+      if (j < 0) break;
+
+      if (a[i] <= a[j]) {
+        m += a[i];
+      } else {
+        break;
+      }
+    }
+    // 自分より後ろを見る
+    for (ll j = i + 1; j < n; j++) {
+      if (j >= n) break;
+
+      if (a[i] <= a[j]) {
+        m += a[i];
+      } else {
+        break;
+      }
+    }
+
+    ans = max(ans, max(a[i], m));
+  }
 
   cout << ans << endl;
 }
