@@ -17,7 +17,17 @@ int main() {
   ll n;
   cin >> n;
 
-  ll ans = 0;
+  vector<string> s(n);
+  rep(i, n) cin >> s[i];
 
-  cout << ans << endl;
+  ll t = 1, f = 1;
+  rep(i, n) {
+    if (s[i] == "AND") {
+      f = t + f * 2;
+    } else {
+      t = t * 2 + f;
+    }
+  }
+
+  cout << t << endl;
 }
