@@ -21,11 +21,11 @@ int main() {
   rep(i, n) cin >> v[i] >> p[i];
 
   ll ans = -1;
-  float sum = 0.0;
+  ll sum = 0;
   rep(i, n) {
-    sum += (float)((v[i] / (float)100.0) * p[i]);
+    sum += v[i] * p[i];
 
-    if (sum > x) {
+    if (sum > x * 100) {
       ans = i + 1;
       break;
     }
