@@ -14,10 +14,22 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, x;
+  cin >> n >> x;
 
-  ll ans = 0;
+  vector<ll> v(n), p(n);
+  rep(i, n) cin >> v[i] >> p[i];
+
+  ll ans = -1;
+  float sum = 0.0;
+  rep(i, n) {
+    sum += (float)((v[i] / (float)100.0) * p[i]);
+
+    if (sum > x) {
+      ans = i + 1;
+      break;
+    }
+  }
 
   cout << ans << endl;
 }
