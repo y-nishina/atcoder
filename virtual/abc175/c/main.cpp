@@ -14,10 +14,18 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll x, k, d;
+  cin >> x >> k >> d;
 
+  x = abs(x);
   ll ans = 0;
+  if (k < x / d) {
+    ans = x - d * k;
+  } else if ((k - x / d) % 2 == 0) {
+    ans = x % d;
+  } else {
+    ans = d - x % d;
+  }
 
   cout << ans << endl;
 }
