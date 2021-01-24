@@ -31,7 +31,12 @@
       "id": "abc175_c",
       "label": "C",
       "title": "Walking Takahashi",
-      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_c"
+      "url": "https://atcoder.jp/contests/abc175/tasks/abc175_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc175_d",
