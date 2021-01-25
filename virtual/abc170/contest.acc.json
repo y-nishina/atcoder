@@ -20,7 +20,12 @@
       "id": "abc170_b",
       "label": "B",
       "title": "Crane and Turtle",
-      "url": "https://atcoder.jp/contests/abc170/tasks/abc170_b"
+      "url": "https://atcoder.jp/contests/abc170/tasks/abc170_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc170_c",
