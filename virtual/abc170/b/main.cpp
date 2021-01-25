@@ -14,10 +14,19 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  int x, y;
+  cin >> x >> y;
 
-  ll ans = 0;
+  rep(i, x + 1) {
+    rep(j, x + 1) {
+      if (i + j == x) {
+        if (i * 2 + j * 4 == y) {
+          cout << "Yes" << endl;
+          return 0;
+        }
+      }
+    }
+  }
 
-  cout << ans << endl;
+  cout << "No" << endl;
 }
