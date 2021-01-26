@@ -17,7 +17,21 @@ int main() {
   ll n;
   cin >> n;
 
-  ll ans = 0;
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
+
+  ll ans = 1;
+  rep(i, n) {
+    if (a[i] == 0) {
+      ans = 0;
+      break;
+    }
+    if (ans > 1000000000000000000 / a[i] || ans < 0) {
+      ans = -1;
+      continue;
+    }
+    ans *= a[i];
+  }
 
   cout << ans << endl;
 }
