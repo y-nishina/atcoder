@@ -20,7 +20,12 @@
       "id": "abc168_b",
       "label": "B",
       "title": "... (Triple Dots)",
-      "url": "https://atcoder.jp/contests/abc168/tasks/abc168_b"
+      "url": "https://atcoder.jp/contests/abc168/tasks/abc168_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc168_c",
