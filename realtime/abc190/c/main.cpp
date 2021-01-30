@@ -14,10 +14,37 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, m;
+  cin >> n >> m;
+  vector<ll> a(m), b(m);
+  rep(i, m) cin >> a[i] >> b[i];
+
+  ll k;
+  cin >> k;
+  vector<ll> c(k), d(k);
+  rep(i, k) cin >> c[i] >> d[i];
+
+  vector<vector<ll>> nbv(pow(2, k), vector<ll>(n));
+  rep(i, pow(2, k)) {
+    rep(j, k) {
+      if (((i >> j) & 1) == 0) {
+        nbv[i][c[j] - 1] = 1;
+      } else {
+        nbv[i][d[j] - 1] = 1;
+      }
+    }
+  }
 
   ll ans = 0;
+  rep(i, pow(2, k)) {
+    ll count = 0;
+    rep(j, m){
+      if(nbv[i][a[j]-1] == 1 && nbv[i][b[j]-1] == 1){
+        count++;
+      }
+    }
+    ans = max(ans, count);
+  }
 
   cout << ans << endl;
 }
