@@ -14,10 +14,19 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, s, d;
+  cin >> n >> s >> d;
 
-  ll ans = 0;
+  vector<ll> x(n), y(n);
+  rep(i, n) cin >> x[i] >> y[i];
+
+  string ans = "No";
+  rep(i, n) {
+    if (x[i] >= s) continue;
+    if (y[i] <= d) continue;
+    ans = "Yes";
+    break;
+  }
 
   cout << ans << endl;
 }
