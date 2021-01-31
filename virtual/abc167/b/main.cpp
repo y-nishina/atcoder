@@ -14,10 +14,24 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll a, b, c, k;
+  cin >> a >> b >> c >> k;
 
-  ll ans = 0;
-
-  cout << ans << endl;
+  if (k <= a) {
+    cout << k << endl;
+    return 0;
+  } else {
+    ll ans = 0;
+    ans += a;
+    k -= a;
+    if(k <= b){
+      cout << ans << endl;
+      return 0;
+    }else {
+      k -= b;
+      ans -= k;
+      cout << ans << endl;
+      return 0;
+    }
+  }
 }
