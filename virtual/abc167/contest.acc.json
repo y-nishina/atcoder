@@ -20,7 +20,12 @@
       "id": "abc167_b",
       "label": "B",
       "title": "Easy Linear Programming",
-      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_b"
+      "url": "https://atcoder.jp/contests/abc167/tasks/abc167_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc167_c",
