@@ -14,10 +14,14 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll k, a, b;
+  cin >> k;
+  cin >> a >> b;
 
-  ll ans = 0;
+  string ans = "NG";
+  repab(i, a, b + 1) {
+    if (i % k == 0) ans = "OK";
+  }
 
   cout << ans << endl;
 }
