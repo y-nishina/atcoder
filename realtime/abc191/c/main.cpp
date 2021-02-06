@@ -14,8 +14,11 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll h, w;
+  cin >> h >> w;
+
+  vector<vector<ll>> s(h, vector<ll>(w));
+  rep(i, h) rep(j, w) cin >> s[i][j];
 
   ll ans = 0;
 

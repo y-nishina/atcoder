@@ -14,10 +14,17 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  double x, y, r;
+  cin >> x >> y >> r;
 
   ll ans = 0;
+  if (floor(x + r) - ceil(x - r) >= 0) {
+    repab(i, ceil(x - r), floor(x + r) + 1) {
+      ll b = ceil(y - sqrt((r + (i - x)) * (r - (i - x))));
+      ll t = floor(y + sqrt((r + (i - x)) * (r - (i - x))));
+      if (t - b >= 0) ans += t - b + 1;
+    }
+  }
 
   cout << ans << endl;
 }
