@@ -14,10 +14,11 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll v, t, s, d;
+  cin >> v >> t >> s >> d;
 
-  ll ans = 0;
+  string ans = "Yes";
+  if (v * t <= d && v * s >= d) ans = "No";
 
   cout << ans << endl;
 }
