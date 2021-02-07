@@ -14,10 +14,15 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll x;
+  cin >> x;
 
+  ll m = 100;
   ll ans = 0;
+  while (m < x) {
+    m += m / 100;
+    ans++;
+  }
 
   cout << ans << endl;
 }
