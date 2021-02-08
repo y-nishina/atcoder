@@ -13,16 +13,17 @@ typedef long double ld;
 #define INF32 2147483647           // 2.147483647×10^{9}:32bit整数のinf
 #define INF64 9223372036854775807  // 9.223372036854775807×10^{18}:64bit整数のinf
 #define MOD 1000000007             //問題による
-ld EPS = 1e-17;
+ld EPS = 1e-14;
 
 int main() {
   ld x, y, r;
   cin >> x >> y >> r;
 
+  r += EPS;
   ll ans = 0;
-  repab(i, ceill(x - r - EPS), floorl(x + r + EPS) + 1) {
-    ll b = (ll)ceill(y - sqrtl(powl(r, 2) - powl((i - x), 2)) - EPS);
-    ll t = (ll)floorl(y + sqrtl(powl(r, 2) - powl((i - x), 2)) + EPS);
+  repab(i, ceill(x - r), floorl(x + r) + 1) {
+    ll b = (ll)ceill(y - sqrtl(powl(r, 2) - powl((i - x), 2)));
+    ll t = (ll)floorl(y + sqrtl(powl(r, 2) - powl((i - x), 2)));
     if (t - b >= 0) ans += t - b + 1;
   }
 
