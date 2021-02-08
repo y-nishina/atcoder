@@ -20,7 +20,12 @@
       "id": "abc164_b",
       "label": "B",
       "title": "Battle",
-      "url": "https://atcoder.jp/contests/abc164/tasks/abc164_b"
+      "url": "https://atcoder.jp/contests/abc164/tasks/abc164_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc164_c",
