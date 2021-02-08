@@ -14,10 +14,8 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll s, w;
+  cin >> s >> w;
 
-  ll ans = 0;
-
-  cout << ans << endl;
+  cout << (s <= w ? "unsafe" : "safe") << endl;
 }
