@@ -14,10 +14,11 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll r;
+  cin >> r;
 
-  ll ans = 0;
+  double pi = 3.141592;
 
-  cout << ans << endl;
+  cout << fixed << setprecision(10);
+  cout << (double)r * pi * 2 << endl;
 }
