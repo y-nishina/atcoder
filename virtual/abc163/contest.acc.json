@@ -20,7 +20,12 @@
       "id": "abc163_b",
       "label": "B",
       "title": "Homework",
-      "url": "https://atcoder.jp/contests/abc163/tasks/abc163_b"
+      "url": "https://atcoder.jp/contests/abc163/tasks/abc163_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc163_c",
