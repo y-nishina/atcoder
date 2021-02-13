@@ -14,10 +14,32 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll b, c;
+  cin >> b >> c;
+
+  ll lmi, lma, rmi, rma;
+  if (b == 0) {
+    lmi = b - c / 2;
+    lma = b;
+    rmi = b - c / 2;
+    rma = b + (c - 1) / 2;
+  } else if (b < 0) {
+    lmi = b - c / 2;
+    lma = b;
+    rmi = -b - (c - 1) / 2;
+    rma = -b + (c - 2) / 2;
+  } else if (b > 0) {
+    lmi = -b - (c - 1) / 2;
+    lma = -(b - (c - 1) / 2);
+    rmi = b - c / 2;
+    rma = b + (c - 2) / 2;
+  }
 
   ll ans = 0;
-
+  if (lma >= rmi) {
+    ans = rma - lmi + 1;
+  } else {
+    ans = lma - lmi + 1 + rma - rmi + 1;
+  }
   cout << ans << endl;
 }
