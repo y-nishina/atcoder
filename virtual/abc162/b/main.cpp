@@ -18,6 +18,12 @@ int main() {
   cin >> n;
 
   ll ans = 0;
+  rep(i, n) {
+    ll target = i + 1;
+    if (target % 3 == 0) continue;
+    if (target % 5 == 0) continue;
+    ans += target;
+  }
 
   cout << ans << endl;
 }
