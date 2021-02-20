@@ -1,7 +1,7 @@
 #define _GLIBCXX_DEBUG
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
+typedef long double ll;
 #define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
 #define repab(i, a, b) for (ll i = (ll)(a); i < (ll)(b); i++)
 #define repr(i, n) for (ll i = (ll)(n); i >= 0; i--)
@@ -14,10 +14,28 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  string x;
+  ll m;
+  cin >> x;
+  cin >> m;
+
+  string xx = x;
+  sort(xx.begin(), xx.end());
+  reverse(xx.begin(), xx.end());
+  ll d = xx[0] - '0';
 
   ll ans = 0;
+  ll n = d + 1;
+  while (true) {
+    ll num = 0;
+    rep(i, x.size()) {
+      num += (x[i] - '0') * powl(n, (ll)(x.size() - i - 1));
+      if (num > m) break;
+    }
+    if (num > m) break;
+    ans++;
+    n++;
+  }
 
   cout << ans << endl;
 }
