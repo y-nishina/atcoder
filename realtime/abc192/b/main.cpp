@@ -14,10 +14,20 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  string s;
+  cin >> s;
 
-  ll ans = 0;
+  string ans = "Yes";
+  rep(i, s.size()) {
+    if (i % 2 == 0 && isupper(s[i])) {
+      ans = "No";
+      break;
+    }
+    if (i % 2 != 0 && islower(s[i])) {
+      ans = "No";
+      break;
+    }
+  }
 
   cout << ans << endl;
 }
