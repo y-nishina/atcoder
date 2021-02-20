@@ -13,11 +13,35 @@ typedef long long ll;
 #define INF64 9223372036854775807  // 9.223372036854775807×10^{18}:64bit整数のinf
 #define MOD 1000000007             //問題による
 
-int main() {
-  ll n;
-  cin >> n;
+ll g1(ll x) {
+  string s = to_string(x);
+  sort(s.begin(), s.end());
+  reverse(s.begin(), s.end());
+  return stoll(s);
+}
 
-  ll ans = 0;
+ll g2(ll x) {
+  string s = to_string(x);
+  sort(s.begin(), s.end());
+  return stoll(s);
+}
+
+int main() {
+  ll n, k;
+  cin >> n >> k;
+
+  // set<ll> s;
+  ll ans = n;
+  rep(i, k + 1) {
+    if (i != 0) {
+      ans = g1(ans) - g2(ans);
+    }
+    // if (s.find(ans) != s.end()) {
+    //   break;
+    // } else {
+    // s.insert(ans);
+    // }
+  }
 
   cout << ans << endl;
 }
