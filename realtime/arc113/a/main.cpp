@@ -14,10 +14,27 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll k;
+  cin >> k;
 
   ll ans = 0;
+  for (ll a = 1; a <= k; a++) {
+    for (ll b = a; b <= k; b++) {
+      if (a * b > k) break;
+      for (ll c = b; c <= k; c++) {
+        if (b * c > k) break;
+        if (a * b * c <= k) {
+          if (a == b && b == c) {
+            ans++;
+          } else if (a == b || b == c || c == a) {
+            ans += 3;
+          } else {
+            ans += 6;
+          }
+        }
+      }
+    }
+  }
 
   cout << ans << endl;
 }
