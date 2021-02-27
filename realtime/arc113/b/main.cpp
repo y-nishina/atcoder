@@ -14,10 +14,32 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll a, b, c;
+  cin >> a >> b >> c;
 
   ll ans = 0;
+  ll a1 = a % 10;
+  ll b1 = b % 10;
+
+  ll bmod = b;
+  if (b1 == 3 || b1 == 7) {
+    if (c % 2 == 0) {
+      bmod = 1;
+    } else {
+      bmod = 3;
+    }
+  } else {
+    bmod = b % 4;
+    if (c != 1) {
+      bmod *= b % 4;
+      bmod %= 4;
+    }
+  }
+
+  if (bmod == 0) bmod = 4;
+
+  ans = pow(a1, bmod);
+  ans %= 10;
 
   cout << ans << endl;
 }

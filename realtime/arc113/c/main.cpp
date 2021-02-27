@@ -14,10 +14,35 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  string s;
+  cin >> s;
 
   ll ans = 0;
+  char c = s[s.size() - 1];
+  ll cnt = 1;
+  bool renzoku = false;
+  char zenkai;
+  ll zenkaiCount = 0;
+  for (ll i = s.size() - 2; i >= 0; i--) {
+    if (c == s[i]) {
+      if (!renzoku) {
+        ans += cnt - count(s.begin() + i + 1, s.end(), c);
+        cout << cnt << endl;
+        cout << count(s.begin() + i + 1, s.end(), c) << endl;
+        // ans += cnt - 1;
+        // if (c == zenkai) {
+        //   ans -= zenkaiCount;
+        //   zenkai = c;
+        //   zenkaiCount = cnt + 1;
+        // }
+      }
+      renzoku = true;
+    } else {
+      renzoku = false;
+    }
+    cnt++;
+    c = s[i];
+  }
 
   cout << ans << endl;
 }
