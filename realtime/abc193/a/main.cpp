@@ -17,7 +17,8 @@ int main() {
   ll a, b;
   cin >> a >> b;
 
-  double ans = 100 - b / a;
+  double ans = 100.0 - 100.0 * (double)b / a;
 
+  cout << fixed << setprecision(10);
   cout << ans << endl;
 }
