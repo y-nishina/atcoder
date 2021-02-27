@@ -17,7 +17,20 @@ int main() {
   ll n;
   cin >> n;
 
-  ll ans = 0;
+  ll ans = INF64;
+  bool b = false;
+  rep(i, n) {
+    ll a, p, x;
+    cin >> a >> p >> x;
 
+    if (x - a > 0) {
+      b = true;
+      ans = min(ans, p);
+    }
+  }
+
+  if (!b) {
+    ans = -1;
+  }
   cout << ans << endl;
 }
