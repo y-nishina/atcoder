@@ -2,7 +2,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-typedef long double ld;
 #define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
 #define repab(i, a, b) for (ll i = (ll)(a); i < (ll)(b); i++)
 #define repr(i, n) for (ll i = (ll)(n); i >= 0; i--)
@@ -19,13 +18,28 @@ int main() {
   cin >> n;
 
   ll ans = 0;
-  for (ll i = 2; i <= n; i++) {
-    for (ll j = 2; powl((ld)i, (ld)1.0 / j) >= (ld)2.0; j++) {
-      ld nThRoot = powl((ld)i, (ld)1.0 / j);
-      if ((ld)abs(nThRoot - floorl(nThRoot)) < (ld)0.0000000000001) {
-        ans++;
-        break;
-      };
+  vector<ll> v;
+  v.push_back(2);
+  for (ll i = 3; i <= n; i++) {
+    ll size = v.size();
+
+    bool b = false;
+    rep(j, size) {
+      ll a = v[j];
+      if (a * a > i) break;
+      rep(k, size) {
+        ll b = v[k];
+        if ((ll)pow(a, b) == (ll)i) {
+          ans++;
+          b = true;
+          break;
+        }
+        if (pow(a, b) > i) break;
+      }
+      if (b) break;
+    }
+    if (!b) {
+      v.push_back(i);
     }
   }
 
