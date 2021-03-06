@@ -14,10 +14,18 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll a, b;
+  cin >> a >> b;
 
   ll ans = 0;
-
+  if (a + b >= 15 && b >= 8) {
+    ans = 1;
+  } else if (a + b >= 10 && b >= 3) {
+    ans = 2;
+  } else if (a + b >= 3) {
+    ans = 3;
+  } else {
+    ans = 4;
+  }
   cout << ans << endl;
 }
