@@ -16,8 +16,15 @@ typedef long long ll;
 int main() {
   ll n;
   cin >> n;
+  vector<ll> a(n), b(n);
+  rep(i, n) cin >> a[i] >> b[i];
 
-  ll ans = 0;
-
+  ll ans = INF64;
+  rep(i, n) {
+    rep(j, n) {
+      if (i == j) continue;
+      ans = min(ans, min(a[i] + b[i], max(a[i], b[j])));
+    }
+  }
   cout << ans << endl;
 }
