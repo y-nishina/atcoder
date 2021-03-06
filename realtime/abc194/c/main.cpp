@@ -16,8 +16,15 @@ typedef long long ll;
 int main() {
   ll n;
   cin >> n;
+  vector<ll> a(n);
+  ll sum = 0;
+  rep(i, n) {
+    cin >> a[i];
+    sum += a[i];
+  }
 
   ll ans = 0;
+  rep(i, n) { ans += (n - 1) * a[i] * a[i] - a[i] * (sum - a[i]); }
 
   cout << ans << endl;
 }
