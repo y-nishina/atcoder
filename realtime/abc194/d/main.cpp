@@ -16,8 +16,8 @@ typedef long long ll;
 int main() {
   ll n;
   cin >> n;
+  double ans = 0.0;
+  repab(i, 1, n) ans += (double)n / (n - i);
 
-  ll ans = 0;
-
-  cout << ans << endl;
+  printf("%.11f\n", ans);
 }
