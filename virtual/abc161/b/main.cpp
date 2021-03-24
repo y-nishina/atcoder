@@ -14,10 +14,23 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, m;
+  cin >> n >> m;
+  vector<ll> a(n);
+  ll sum = 0;
+  rep(i, n) {
+    cin >> a[i];
+    sum += a[i];
+  }
 
-  ll ans = 0;
+  vsortr(a);
+
+  string ans = "Yes";
+  rep(i, m) {
+    if (a[i] * 4 * m < sum) {
+      ans = "No";
+    }
+  }
 
   cout << ans << endl;
 }
