@@ -20,7 +20,12 @@
       "id": "abc161_b",
       "label": "B",
       "title": "Popular Vote",
-      "url": "https://atcoder.jp/contests/abc161/tasks/abc161_b"
+      "url": "https://atcoder.jp/contests/abc161/tasks/abc161_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc161_c",
