@@ -16,6 +16,8 @@ typedef long long ll;
 int main() {
   ll n;
   cin >> n;
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
 
   ll ans = 0;
 

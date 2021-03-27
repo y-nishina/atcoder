@@ -14,10 +14,33 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll h, w, x, y;
+  cin >> h >> w >> x >> y;
+  vector<string> s(h);
+  rep(i, h) { cin >> s[i]; }
 
   ll ans = 0;
+  // 上
+  for (int i = x; i >= 1; i--) {
+    if (s[i - 1][y - 1] == '#') break;
+    ans++;
+  }
+  // 下
+  for (int i = x; i <= h; i++) {
+    if (s[i - 1][y - 1] == '#') break;
+    ans++;
+  }
+  // 左
+  for (int i = y; i >= 1; i--) {
+    if (s[x - 1][i - 1] == '#') break;
+    ans++;
+  }
+  // 右
+  for (int i = y; i <= w; i++) {
+    if (s[x - 1][i - 1] == '#') break;
+    ans++;
+  }
+  ans -= 3;
 
   cout << ans << endl;
 }
