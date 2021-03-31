@@ -19,7 +19,14 @@ int main() {
 
   w *= 1000;
 
-  ll ans = 0;
+  string ans = "";
 
-  cout << ans << endl;
+  ll mi = ceil(w / b);
+  ll ma = floor(w / a);
+
+  if (mi > ma) {
+    printf("UNSATISFIABLE\n");
+  } else {
+    printf("%d %d\n", mi, ma);
+  }
 }
