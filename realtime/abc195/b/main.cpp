@@ -27,6 +27,6 @@ int main() {
   if (mi > ma) {
     printf("UNSATISFIABLE\n");
   } else {
-    printf("%d %d\n", mi, ma);
+    printf("%lld %lld\n", mi, ma);
   }
 }
