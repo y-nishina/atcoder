@@ -14,10 +14,8 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  string s;
+  cin >> s;
 
-  ll ans = 0;
-
-  cout << ans << endl;
+  cout << ((s[2] == s[3] && s[4] == s[5]) ? "Yes" : "No") << endl;
 }
