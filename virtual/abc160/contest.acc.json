@@ -20,7 +20,12 @@
       "id": "abc160_b",
       "label": "B",
       "title": "Golden Coins",
-      "url": "https://atcoder.jp/contests/abc160/tasks/abc160_b"
+      "url": "https://atcoder.jp/contests/abc160/tasks/abc160_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc160_c",
