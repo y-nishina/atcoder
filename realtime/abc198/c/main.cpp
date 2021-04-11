@@ -14,24 +14,10 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  string s;
-  cin >> s;
+  ll n;
+  cin >> n;
 
-  while (1) {
-    if (s.size() == 0) {
-      break;
-    }
-    if (s[s.size() - 1] == '0') {
-      s.pop_back();
-    } else {
-      break;
-    }
-  }
-  if (s.size() == 0) {
-    cout << "Yes" << endl;
-    return 0;
-  }
-  string rs = s;
-  reverse(rs.begin(), rs.end());
-  cout << ((s == rs) ? "Yes" : "No") << endl;
+  ll ans = 0;
+
+  cout << ans << endl;
 }

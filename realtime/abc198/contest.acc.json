@@ -31,7 +31,12 @@
       "id": "abc198_c",
       "label": "C",
       "title": "Compass Walking",
-      "url": "https://atcoder.jp/contests/abc198/tasks/abc198_c"
+      "url": "https://atcoder.jp/contests/abc198/tasks/abc198_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc198_d",
