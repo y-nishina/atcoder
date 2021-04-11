@@ -42,7 +42,12 @@
       "id": "abc198_d",
       "label": "D",
       "title": "Send More Money",
-      "url": "https://atcoder.jp/contests/abc198/tasks/abc198_d"
+      "url": "https://atcoder.jp/contests/abc198/tasks/abc198_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "main.cpp"
+      }
     },
     {
       "id": "abc198_e",

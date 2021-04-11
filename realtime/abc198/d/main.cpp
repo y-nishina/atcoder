@@ -14,16 +14,10 @@ typedef long long ll;
 #define MOD 1000000007             //問題による
 
 int main() {
-  double r, x, y;
-  cin >> r >> x >> y;
+  ll n;
+  cin >> n;
 
   ll ans = 0;
-  double s = sqrt(x * x + y * y);
-  if (fmod(s, r) == 0) {
-    ans = (ll)(s / r);
-  } else {
-    ans = max((ll)2, (ll)(s / r) + 1);
-  }
 
   cout << ans << endl;
 }
