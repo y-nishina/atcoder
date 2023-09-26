@@ -8,16 +8,19 @@ typedef long long ll;
 #define vsort(v) sort(v.begin(), v.end())
 #define vsortr(v) sort(v.rbegin(), v.rend())
 
-//定数
+// 定数
 #define INF32 2147483647           // 2.147483647×10^{9}:32bit整数のinf
 #define INF64 9223372036854775807  // 9.223372036854775807×10^{18}:64bit整数のinf
-#define MOD 1000000007             //問題による
+#define MOD 1000000007             // 問題による
 
 int main() {
-  ll n;
-  cin >> n;
+  ll n, x;
+  cin >> n >> x;
+  vector<ll> a(n);
+  rep(i, n) cin >> a[i];
 
-  ll ans = 0;
+  string ans = "No";
+  rep(i, n) if (a[i] == x) ans = "Yes";
 
   cout << ans << endl;
 }
