@@ -14,12 +14,11 @@ typedef long long ll;
 #define MOD 1000000007             // 問題による
 
 int main() {
-  ll n;
+  string n;
   cin >> n;
-  vector<ll> a(n);
-  rep(i, n) cin >> a[i];
 
-  ll ans = 0;
+  string ans = "Yes";
+  repab(i, 1, n.size()) if (n[i] >= n[i - 1]) ans = "No";
 
   cout << ans << endl;
 }
